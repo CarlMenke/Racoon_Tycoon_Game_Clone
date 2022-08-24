@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+<div id = 'body-left' class = "body-side">
+  <div id = 'start-button'>Begin!</div>
+  <div id = 'player-one' class = "currPlayer">
+    <div id = 'player-one-name' class = 'player-name'>Player One</div>
+    <div id = 'player-one-money' class = 'player-money'>10</div>
+    <div id = "player-one-railroads" class = 'player-railroads'></div>
+    <div id = 'player-one-towns' class = 'player-towns'></div>
+    <div id = 'player-one-commodies' class = 'player-commodies'></div>
+    <div id = 'player-one-buildings' class = "player-buildings"></div>
+    <div id = 'player-one-production' class = "player-production"></div>
+  </div>
+  <div id = 'player-three' class = "player">
+    <div id = 'player-three-name' class = 'player-name'>Player Three</div>
+    <div id = 'player-three-money' class = 'player-money'>10</div>
+    <div id = "player-three-railroads" class = 'player-railroads'></div>
+    <div id = 'player-three-towns' class = 'player-towns'></div>
+    <div id = 'player-three-commodies' class = 'player-commodies'></div>
+    <div id = 'player-three-buildings' class = "player-buildings"></div>
+    <div id = 'player-three-production' class = "player-production"></div>
+  </div>
+</div>
+<div id = 'body-middle'>
+  <div id = 'middle-top'>
+    <div id = 'title'>Racoon Tycoon</div>
+  </div>
+  <div id = 'board'>
+    <div id = 'stocks'>
+      <div id = 'stocks-wheat' >
+        <img id = "wheatpng" class = 'wheat-position' src="images/commodies/wheat.png" >
+      </div> 
+      <div id = 'stocks-wood' >
+        <img id = "woodpng" class = 'wood-position' src="images/commodies/wood.png" >
+      </div> 
+      <div id = 'stocks-iron' >
+        <img id = "ironpng" class = 'iron-position' src="images/commodies/iron.png">
+      </div> 
+      <div id = 'stocks-coal' >
+        <img id = "coalpng" class = 'coal-position' src="images/commodies/coal.png" >
+      </div> 
+      <div id = 'stocks-goods' >
+        <img id = "goodspng" class = 'goods-position' src="images/commodies/goods.png" >
+      </div> 
+      <div id = 'stocks-luxury' >
+        <img id = "luxurypng" class = 'luxury-position' src="images/commodies/luxury.png" >
+      </div> 
+    </div>
+    <div id = 'cards'>
+      <div id = 'cards-railroads' >
+        <div id = 'cards-railroads-container' class = "maincontainer">
+          <div id = 'cards-railroads-stack' class = 'card'>
+            <img id = "cards-railroads-stack-image" class = 'flip-card-styling card' src = 'images/railroads/backcover.jpg' alt = 'railroadstack'>
+          </div>
+        </div>
+        <div id = 'cards-railroads-one'></div>
+        <div id = 'cards-railroads-two'></div>
+      </div>
+      <div id = 'cards-priceandproduction'>
+        <img src = "images/produce.jpg" id = 'pp-card'>
+      </div>
+      <div id = 'cards-towns'>
+        <div id = 'cards-towns-container' class = "maincontainer">
+          <div id = 'cards-towns-stack' class = 'card'>
+            <img id = "cards-towns-stack-image" class = 'flip-card-styling card' src = 'images/towns/backcover.jpg' alt = 'townstack'>
+          </div>
+        </div>
+        <div id = "cards-towns-inplay"></div>
+      </div>
+      <div id = 'confirm-cancel'>
+        <div id = 'confirm-choice'>Confirm</div>
+        <div id = 'cancel-choice'>Cancel</div>
+      </div>
+      <div id = 'cards-buildings' >
+        <div id = 'cards-buildings-container' class = "maincontainer">
+          <div id = 'cards-buildings-stack' class = 'card'>
+            <img id = "cards-buildings-stack-image" class = 'flip-card-styling card' src = 'images/buildings/backcover.jpg' alt = 'buildingstack'>
+          </div>
+        </div>
+        <div id = 'cards-buildings-one'></div>
+        <div id = 'cards-buildings-two'></div>
+        <div id = 'cards-buildings-three'></div>
+        <div id = 'cards-buildings-four'></div>
+      </div>
+    </div>
+  </div>
+  <div id = 'UI'>
+    <div id = 'showText'>Enter The Players Name's (Leave Blank if no player) : </div>
+    <div id = 'player-names'>    
+      <input id = 'player-one-name-input' class = 'player-name-input' value = 'Player 1'>
+      <input id = 'player-two-name-input' class = 'player-name-input' value = 'Player 2'>
+      <input id = 'player-three-name-input' class = 'player-name-input' value = 'Player 3'>
+      <input id = 'player-four-name-input' class = 'player-name-input' value = 'Player 4'>
+    </div>
+
+  </div>
+</div>
+<div id = 'body-right' class = "body-side">
+  <div id = 'whos-turn'>Player One Plays</div>
+  <div id = 'player-two' class = "player">
+    <div id = 'player-two-name' class = 'player-name'>Player Two</div>
+    <div id = 'player-two-money' class = 'player-money'>10</div>
+    <div id = "player-two-railroads" class = 'player-railroads'></div>
+    <div id = 'player-two-towns' class = 'player-towns'></div>
+    <div id = 'player-two-commodies' class = 'player-commodies'></div>
+    <div id = 'player-two-buildings' class = "player-buildings"></div>
+    <div id = 'player-two-production' class = "player-production"></div>
+</div>
+  <div id = 'player-four' class = "player">
+    <div id = 'player-four-name' class = 'player-name'>Player Four</div>
+    <div id = 'player-four-money' class = 'player-money'>10</div>
+    <div id = "player-four-railroads" class = 'player-railroads'></div>
+    <div id = 'player-four-towns' class = 'player-towns'></div>
+    <div id = 'player-four-commodies' class = 'player-commodies'></div>
+    <div id = 'player-four-buildings' class = "player-buildings"></div>
+    <div id = 'player-four-production' class = "player-production"></div>
+  </div>
+</div>
+</body>
+</html>
+<script type = "text/javascript" src = "script.js"></script>

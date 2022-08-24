@@ -1,0 +1,830 @@
+/*LARGE CONTAINERS STYLINGS*/
+body{
+    background-color:rgb(60, 93, 54);
+    display:grid;
+    grid-template-columns:1fr 2fr 1fr;
+  }
+  .body-side{
+    display:grid; 
+    grid-template-rows:9% 1fr 1fr;
+    justify-content:center;
+    width:100%;
+  }
+  #start-button{
+    border:8px solid rgb(159, 106, 37);
+    background-color:rgb(224, 214, 196);
+    border-radius:8px;
+    box-shadow: 10px 10px 18px #000000;
+    margin:12px;
+    font-family:main;
+    font-weight: bold;
+    font-size:35px;
+    text-align:center;
+    padding:5px;
+    color:rgb(25, 40, 22);
+  }
+  #whos-turn{
+    border:8px solid rgb(159, 106, 37);
+    background-color:rgb(224, 214, 196);
+    border-radius:8px;
+    box-shadow: 10px 10px 18px #000000;
+    margin:12px;
+    font-family:main;
+    font-weight: bold;
+    font-size:35px;
+    text-align:center;
+    padding:5px;
+    color:rgb(25, 40, 22);
+  }
+  #body-middle{
+    display:grid;
+    grid-template-rows:10% 1fr auto;
+    grid-template-areas:
+    'title'
+    'board'
+    'input';
+    justify-content:center;
+    justify-self:center;
+    align-self:center; 
+  }
+  #middle-top{
+    display:grid;
+    text-align:center;
+    align-items: center;
+  }
+  #UI {
+    grid-area:input;
+    display:flex;
+    flex-flow:column nowrap;
+    align-items:center;
+    justify-content:center;
+    border:8px solid rgb(159, 106, 37);
+    background-color:rgb(224, 214, 196);
+    border-radius:8px;
+    box-shadow: 10px 10px 18px #000000;
+    margin-top:12px;
+    font-family:main;
+    font-size:30px;
+    text-align:center;
+    font-weight: bold;
+    color:rgb(39, 62, 35);
+    justify-content:space-around;
+    align-items:space-around;
+  }
+  #turnInput{
+    margin-left:50px;
+    margin-right:50px;
+    margin:4px;
+    font-family:main;
+    font-weight: bold;
+    color:rgb(39, 62, 35);
+    font-size:20px;
+    text-align:center;
+    padding:4px;
+    border:4px solid rgb(159, 106, 37);
+    background-color:rgb(246, 243, 237);
+    border-radius:3px;
+  }
+  #submit{
+    margin-left:50px;
+    margin-right:50px;
+    margin-bottom:15px;
+    font-family:main;
+    font-weight: bold;
+    color:rgb(39, 62, 35);
+    font-size:20px;
+    text-align:center;
+    padding:4px;
+    border:4px solid rgb(159, 106, 37);
+    background-color:rgb(224, 214, 196);
+    border-radius:3px;
+  }
+  #title{
+    font-size:4em;
+    color:rgb(232, 217, 196);
+    text-shadow:4px 4px rgb(19, 18, 18);
+    font-family:main;
+    font-weight: bold;
+    align-items:center;
+  }
+  #board{
+    width: 698px;
+    height: 683px;
+    border:8px solid rgb(159, 106, 37);
+    background-image:url("images/board.jpg");
+    border-radius:8px;
+    box-shadow: 10px 10px 18px #000000;
+    display:grid;
+    grid-template-rows: 289px 1fr;
+    align-self:center;
+    justify-self:center;
+  }
+  
+  .highlight{
+    box-shadow: 3px 3px 3px #eee25a;
+  }
+  
+  /* STOCK MARKET STYLING */
+  #stocks{
+  display:grid;
+  grid-template: 25px 1fr / 9px 1fr 1fr 1fr 1fr 1fr 1fr 9px;
+  grid-template-areas: 
+  " . . . . . . . . "
+  " . wheat1 wood iron coal goods luxury . ";
+  }
+  
+  /* STOCK MARKET ANIMATIONS */
+  .moveStock{
+    animation-name:moveCommodity;
+    animation-duration:.5s;
+    bottom:var(--commodity-EndBottom);
+    left:var(--commodity-EndLeft);
+  }
+  
+  :root {
+    --commodity-StartBottom:0px;
+    --commodity-StartLeft:0px;
+    --commodity-EndBottom:100px;
+    --commodity-EndLeft:100px;
+    --wheat-positionLeft:28px;
+    --wheat-positionBottom:0px;
+    --wood-positionLeft:28px;
+    --wood-positionBottom:0px;
+    --iron-positionLeft:28px;
+    --iron-positionBottom:0px;
+    --coal-positionLeft:28px;
+    --coal-positionBottom:0px;
+    --goods-positionLeft:28px;
+    --goods-positionBottom:0px;
+    --luxury-positionLeft:28px;
+    --luxury-positionBottom:0px;
+    --cardEndX:0px;
+    --cardEndY:0px;
+  }
+  
+  @keyframes moveCommodity {
+    from {left:var(--commodity-StartLeft); bottom:var(--commodity-StartBottom);}
+    to {left:var(--commodity-EndLeft); bottom:var(--commodity-EndBottom);}
+  }
+  
+  
+  #stocks-wheat{
+    grid-area:wheat1;
+    position:relative;
+  }
+  #wheatpng{
+    width:26px;
+    height:26px;
+    position:absolute;
+  }
+  .wheat-position{
+    bottom:var(--wheat-positionBottom );
+    left:var(--wheat-positionLeft );
+  }
+  
+  
+  #stocks-wood{
+    grid-area:wood;
+    position:relative;
+  }
+  #woodpng{
+    width:26px;
+    height:26px;
+    position:absolute;
+  }
+  .wood-position{
+    bottom:var(--wood-positionBottom ) ;
+    left:var(--wood-positionLeft );
+  }
+  
+  
+  #stocks-iron{
+    grid-area:iron;
+    position:relative;
+  }
+  #ironpng{
+    width:26px;
+    height:26px;
+    position:absolute;
+  }
+  .iron-position{
+    bottom:var(--iron-positionBottom );
+    left:var(--iron-positionLeft );
+  }
+  
+  
+  #stocks-coal{
+    grid-area:coal;
+    position:relative;
+  }
+  #coalpng{
+    width:26px;
+    height:26px;
+    position:absolute;
+  }
+  .coal-position{
+    bottom:var(--coal-positionBottom );
+    left:var(--coal-positionLeft );
+  }
+  
+  
+  #stocks-goods{
+    grid-area:goods;
+    position:relative;
+  }
+  #goodspng{
+    width:26px;
+    height:26px;
+    position:absolute;
+  }
+  .goods-position{
+    bottom:var(--goods-positionBottom );
+    left:var(--goods-positionLeft );
+  }
+  
+  
+  #stocks-luxury{
+    grid-area:luxury;
+    position:relative;
+  }
+  #luxurypng{
+    width:26px;
+    height:26px;
+    position:absolute;
+  }
+  .luxury-position{
+    bottom:var(--luxury-positionBottom );
+    left:var(--luxury-positionLeft );
+  }
+  
+  
+  /* BOTTOM HALF OF BOARD STYLING */
+  #cards{
+  display:grid;
+  grid-template: 68px 160px 1fr 100px 7px/362px 1fr 260px;
+  grid-template-areas: 
+  ". . ."
+  "railroads priceandproduction towns" 
+  "choice choice choice "
+  "buildings buildings buildings"
+  ". . . "
+  }
+  
+  
+  /* RAILROAD STYLINGS */
+  #cards-railroads{
+    position:relative;
+    grid-area:railroads;
+    display:grid;
+    grid-template-columns: 14px 1fr 1fr 1fr 13px;
+    grid-template-areas: ". stack one two . "
+  }
+  #cards-railroads-container{
+    display:grid;
+    grid-area:stack;
+  }
+  #cards-railroads-stack{
+    position:relative;
+    display:grid;
+  }
+  
+  #cards-railroads-one{
+    grid-area:one;
+    display:grid;
+    align-items:center;
+    justify-content: end;
+    position:relative;
+  }
+  #cards-railroads-two{
+    grid-area:two;
+    display:grid;
+    align-items:center;
+    justify-content: end;
+    position:relative;
+  
+  }
+  /* RAILROAD ANIMATIONS*/
+  
+  
+  /* PRICE AND PRODUCTION STYLING */
+  #cards-priceandproduction{
+  display: grid;
+  grid-area:priceandproduction;
+  position:relative;
+  }
+  #pp-card{
+    position:absolute;
+    width:100%;
+    height:70%;
+    object-fit:fill;
+    border-radius: 8px;
+    align-self:center;
+    justify-self: center;
+  }
+  .priceproduction-card{
+    display:flex;
+    flex-flow:column;
+    flex-wrap:nowrap;
+    border-radius:2px;
+    border: 2px solid white;
+    margin: 5px;
+    width:30px;
+    height:60px;
+    box-shadow: 2px 2px 2px rgba(77, 76, 76, 0.719);
+  }
+  .price-card{
+    display:flex;
+    flex-wrap:wrap;
+    background-color: rgb(6, 58, 118);
+    border-bottom: 1px solid white;
+    flex-grow:1;
+    text-align: center;
+    font-size:35%;
+    font-family:main;
+    color:white;
+    justify-content:space-around;
+    align-items:space-around;
+  }
+  #produce-cancel-button{
+    margin:4px;
+    font-family:main;
+    font-weight: bold;
+    color:rgb(39, 62, 35);
+    font-size:20px;
+    text-align:center;
+    padding:4px;
+    border:4px solid rgb(159, 106, 37);
+    background-color:rgb(224, 214, 196);
+    border-radius:3px;
+  }
+  .production-card{
+    display:flex;
+    flex-wrap:wrap;
+    background-color: rgb(149, 38, 8);
+    border-top: 1px solid white;
+    flex-grow:1;
+    text-align: center;
+    font-size:35%;
+    font-family:main;
+    color:white;
+    justify-content:space-around;
+    align-items:space-around;
+  }
+  #showText{
+    margin:5px;
+    align-self:center;
+    justify-self:center;
+  }
+  .cardCommodity{
+    width:30%;
+    height:30%
+  }
+  .priceproduction-choice{
+    align-self:center;
+    justify-self:center;
+    grid-area:choice;
+    display:flex;
+    flex-flow: row nowrap;
+    margin:8px;
+    font-family:main;
+    font-weight: bold;
+    color:rgb(39, 62, 35);
+    font-size:15px;
+    text-align:center;
+    padding:3px;
+    border:8px solid rgb(159, 106, 37);
+    background-color:rgb(224, 214, 196);
+    border-radius:8px;
+    box-shadow: 10px 10px 18px #000000;
+  }
+  .scale-up{
+    transform:scale(3);
+    margin:50px;
+    margin-top:70px;
+    margin-bottom:70px;
+  }
+  .scale-up2{
+    transform:scale(3);
+    margin:20px;
+  }
+  #UI-show-commodies{
+    grid-area:input;
+    display:flex;
+    flex-flow:row wrap;
+    align-items:center;
+    justify-content:center;
+    border:8px solid rgb(159, 106, 37);
+    background-color:rgb(224, 214, 196);
+    border-radius:8px;
+    box-shadow: 10px 10px 18px #000000;
+    margin-top:12px;
+    font-family:main;
+    font-size:30px;
+    text-align:center;
+    font-weight: bold;
+    color:rgb(39, 62, 35);
+    justify-content:space-around;
+    align-items:space-around;
+  }
+  
+  /* TOWNS STYLING */
+  #cards-towns{
+    position:relative;
+    grid-area:towns;
+    display:grid;
+    grid-template-columns: 17px 1fr 1fr 19px;
+    grid-template-areas: ". stack town . ";
+  }
+  #cards-towns-container{
+    display:grid;
+    grid-area:stack;
+  }
+  #cards-towns-stack{
+    position:relative;
+    display:grid;
+  }
+  #cards-towns-inplay{
+    grid-area:town;
+    position:relative;
+    display:grid;
+  }
+  #any-choice{
+    margin:4px;
+    font-family:main;
+    font-weight: bold;
+    color:rgb(39, 62, 35);
+    font-size:20px;
+    text-align:center;
+    padding:2px;
+    border:4px solid rgb(159, 106, 37);
+    background-color:rgb(224, 214, 196);
+    border-radius:3px;
+    box-shadow: 10px 10px 18px #000000;
+  }
+  #specific-commodity{
+    width:20px;
+    height:20px;
+  }
+  
+  /* CONFIRM AND CACEL BUTTON */
+  #confirm-cancel{
+    grid-area:choice;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content: space-around;
+    align-content:space-around;
+    margin:6px;
+    width:30%;
+    justify-self:center;
+    opacity:0;
+  }
+  #confirm-choice{
+    display:flex;
+    flex-flow:row nowrap;
+    margin:4px;
+    font-family:main;
+    font-weight: bold;
+    color:rgb(39, 62, 35);
+    font-size:20px;
+    text-align:center;
+    padding:4px;
+    border:4px solid rgb(159, 106, 37);
+    background-color:rgb(224, 214, 196);
+    border-radius:3px;
+    box-shadow: 10px 10px 18px #000000;
+  }
+  #cancel-choice{
+    margin:4px;
+    font-family:main;
+    font-weight: bold;
+    color:rgb(39, 62, 35);
+    font-size:20px;
+    text-align:center;
+    padding:4px;
+    border:4px solid rgb(159, 106, 37);
+    background-color:rgb(224, 214, 196);
+    border-radius:3px;
+    box-shadow: 10px 10px 18px #000000;
+  }
+  #how-many{
+    margin:4px;
+    font-family:main;
+    font-weight: bold;
+    color:rgb(39, 62, 35);
+    font-size:20px;
+    text-align:center;
+    padding:4px;
+    border:4px solid rgb(159, 106, 37);
+    background-color:rgb(224, 214, 196);
+    border-radius:3px;
+    box-shadow: 10px 10px 18px #000000;
+  }
+  
+  #skip-button{
+    display:flex;
+    flex-flow:row nowrap;
+    margin:4px;
+    font-family:main;
+    font-weight: bold;
+    color:rgb(39, 62, 35);
+    font-size:20px;
+    text-align:center;
+    padding:4px;
+    border:4px solid rgb(159, 106, 37);
+    background-color:rgb(224, 214, 196);
+    border-radius:3px;
+    box-shadow: 10px 10px 18px #000000;
+  }
+  
+  
+  /*BUILDING STYLE*/
+  #cards-buildings{
+    position:relative;
+    grid-area:buildings;
+    display:grid;
+    grid-template-columns:152px 1fr 1fr 1fr 1fr 1fr 47px;
+    grid-template-areas: ". stack building1 building2 building3 building4  . "
+  }
+  #cards-buildings-container{
+    display:grid;
+    grid-area:stack;
+  }
+  #cards-buildings-stack{
+  position:relative;
+  display: grid;
+  }
+  #cards-buildings-stack-image{
+    align-self:center;
+    justify-self: center;
+    width:80%;
+    height:80%;
+    object-fit:fill;
+    border-radius: 8px;
+  }
+  
+  
+  #cards-buildings-one{
+    position:relative;
+    grid-area: building1;
+    display:grid;
+  }
+  #cards-buildings-two{
+    position:relative;
+    grid-area: building2;
+    display:grid;
+  }
+  #cards-buildings-three{
+    grid-area: building3; 
+    position:relative;
+    display:grid;
+  }
+  #cards-buildings-four{
+    grid-area: building4;
+    position:relative;
+    display:grid;
+  }
+  /* BUILDING ANIMATION*/
+  .playerWin{
+    padding:5px;
+    margin:14px;
+    font-family:main;
+    font-weight: bold;
+    color:rgb(39, 62, 35);
+    font-size:27px;
+    text-align:center;
+    border:4px solid rgb(159, 106, 37);
+    background-color:rgb(224, 214, 196);
+    border-radius:3px;
+    box-shadow: 10px 10px 18px #000000;
+    align-self:center;
+  }
+  
+  
+  
+  /*INDIVIDUAL PLAYER INFO STYLINGS*/
+  .player{
+    display:grid;
+    grid-template:40px auto auto/ 1fr 1fr 1fr;
+    grid-template-areas: 
+    "name . money"
+    "railroads towns commodies"
+    "buildings buildings pp";
+    width:stretch;
+    border:8px solid rgb(159, 116, 37);
+    background-color:rgb(224, 214, 196);
+    border-radius:8px;
+    box-shadow: 15px 15px 20px #000000;
+    margin:12px;
+  }
+  @font-face {
+    font-family: main;
+    src: url('images/MaguireThin-eZY8e.otf');
+  }
+  .currPlayer{
+    display:grid;
+    grid-template:40px auto auto/ 1fr 1fr 1fr;
+    grid-template-areas: 
+    "name . money"
+    "railroads towns commodies"
+    "buildings buildings pp";
+    width:stretch;
+    border:8px solid rgb(159, 106, 37);
+    background-color:rgb(224, 214, 196);
+    border-radius:8px;
+    box-shadow: 10px 10px 12px #f4e2c8;
+    margin:12px;
+  }
+  .player-name{
+    grid-area:name;
+    margin:8px;
+    font-family:main;
+    font-weight: bold;
+    color:rgb(39, 62, 35);
+    font-size:30px;
+    text-align:center;
+    padding:5px;
+  }
+  .player-money{
+    grid-area:money;
+    margin:8px;
+    font-family:main;
+    font-weight: bold;
+    color:rgb(39, 62, 35);
+    font-size:30px;
+    vertical-align: middle;
+    padding:5px;
+    justify-self:end;
+  }
+  .player-railroads{
+    display:flex;
+    flex-flow:row wrap;
+    border:4px solid rgb(159, 106, 37);
+    background-color:rgb(210, 189, 142);
+    border-radius:4px;
+    grid-area:railroads;
+    margin:5px;
+  }
+  .player-towns{
+    display:flex;
+    flex-flow:row wrap;
+    border:4px solid rgb(159, 106, 37);
+    background-color:rgb(210, 189, 142);
+    border-radius:4px;
+    grid-area:towns;
+    margin:5px;
+  }
+  .player-commodies{
+    display:flex;
+    flex-flow:row wrap;
+    border:4px solid rgb(159, 106, 37);
+    background-color:rgb(210, 189, 142);
+    border-radius:4px;
+    grid-area:commodies;
+    margin:5px;
+  }
+  .player-buildings{
+    display:flex;
+    flex-flow:row wrap;
+    border:4px solid rgb(159, 106, 37);
+    background-color:rgb(210, 189, 142);
+    border-radius:4px;
+    grid-area:buildings;
+    margin:5px;
+  }
+  
+  .player-production{
+    display:flex;
+    flex-flow:row wrap;
+    border:4px solid rgb(159, 106, 37);
+    background-color:rgb(210, 189, 142);
+    border-radius:4px;
+    grid-area:pp;
+    margin:5px;
+  }
+  .playerBuilding{
+    width:60px;
+    height:60px;
+    margin: 2px;
+    box-shadow: 2px 2px 2px #1f1e1e;
+  }
+  .playerRailRoad{
+    width:45px;
+    height:60px;
+    margin: 2px;
+    box-shadow: 2px 2px 2px #1f1e1e;
+  }
+  .playerCommodity{
+    width:25px;
+    height:25px;
+  }
+  .playerTown{
+    width:45px;
+    height:60px;
+    margin: 2px;
+    box-shadow: 2px 2px 2px #1f1e1e;
+  }
+  /*INDIVIDUAL PLAYER NAMES*/
+  #player-names{
+    display:grid;
+    grid-template:1fr 1fr / 1fr 1fr;
+    grid-template-areas:
+    'p1 p2'
+    'p3 p4';
+    align-items: center;
+    justify-content: center;
+    margin:5px;
+  }
+  #player-one-name-input{
+    grid-area:p1;
+    margin-right:40px;
+  }
+  #player-two-name-input{
+    grid-area:p2;
+    margin-left:40px;
+  }
+  #player-three-name-input{
+    grid-area:p3;
+    margin-right:40px;
+  }
+  #player-four-name-input{
+    grid-area:p4;
+    margin-left:40px;
+  }
+  .player-name-input{
+    margin:5px;
+    font-family:main;
+    font-weight: bold;
+    color:rgb(39, 62, 35);
+    font-size:20px;
+    text-align:center;
+    padding:4px;
+    border:4px solid rgb(159, 106, 37);
+    background-color:rgb(246, 243, 237);
+    border-radius:3px;
+  }
+  
+  
+  /*FLIP CARD ANIMATION*/
+  
+  @keyframes flipCard{
+    to{ transform:rotateY(180deg);}
+  }
+  .flip-card-styling{
+    position:absolute;
+    width:80%;
+    height:80%;
+    object-fit:fill;
+    border-radius: 8px;
+    align-self:center;
+    justify-self: center;
+  }
+  
+  .maincontainer{
+    position:relative;
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+  }
+  
+  .card{
+  transform-style:preserve-3d;
+  }
+  
+  .front{
+    backface-visibility: hidden;
+  }
+  .back{
+    backface-visibility: hidden;
+    transform:rotateY(180deg);
+  }
+  .flipCard{
+    animation-name:flipCard;
+    animation-duration:1.2s;
+  }
+  
+  /*MOVE CARD ANMIMATION */
+  @keyframes moveCard {
+    to {transform: translate(calc(var(--cardEndX ) * 1px),calc(var(--cardEndY ) * 1px));}
+  } 
+  
+  .move-card-styling{
+    position:absolute;
+    width:80%;
+    height:80%;
+    object-fit:fill;
+    border-radius: 8px;
+  }
+  
+  .move-card{
+    animation-name:moveCard;
+    animation-duration:1s;
+  }
+  
+  .postFlip{
+    transform:rotateY(180deg);
+  }
+  
+  
+  
+  
+  
