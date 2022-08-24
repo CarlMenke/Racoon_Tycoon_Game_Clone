@@ -55,7 +55,7 @@ Final Game Board Screenshot:
 
 1. Enter All the names of the people playing
 2. Player one is up first
-3. On your tuurn you can do 5 things, all displayed on the page
+3. On your turn you can do 5 things, all displayed on the page
    - Purchase a buildings
    - Purchase a town
    - Purchase a Rail Road
