@@ -22,9 +22,6 @@ This is a browser-based Racoon Tycoon Program written in JavaScript which I code
 
 ## **_Screenshots_**
 
-Game Board Mock-up:
-![**mockup**|50%](images/IMG-4812.jpg)
-
 Final Game Board Screenshot:
 ![**gameboard](images/Capture.PNG)
 
