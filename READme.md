@@ -50,6 +50,8 @@ Final Game Board Screenshot:
 
 ## **_Getting Started_**
 
+[Play Here](https://general-drawer.surge.sh/)
+
 1. Enter All the names of the people playing
 2. Player one is up first
 3. On your turn you can do 5 things, all displayed on the page
